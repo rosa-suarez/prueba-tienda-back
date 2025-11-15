@@ -7,6 +7,8 @@ const cors = require('cors');
 // Crear una instancia de una aplicación Express, que será nuestro servidor 
 const app = express();
 
+app.use(express.json()); //NUEVA LINEA
+
 // Define el puerto en el que escuchará el servidor (3000)
 const port = 3000;
 
@@ -15,6 +17,7 @@ const port = 3000;
 const ALLOWED_ORIGINS = [
     'http://localhost:5500',
     'http://127.0.0.1:5500',
+    'https://tiendapruebaa.netlify.app'
 ];
 
 // Configurar el middleware CORS antes de las rutas 
